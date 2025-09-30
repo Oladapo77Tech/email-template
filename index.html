@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML Email Template</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+		}
+		table {
+			border-spacing: 0;
+		}
+		td {
+			padding: 0;
+		}
+		img {
+			border: 0;
+		}
+		.wrapper {
+			width: 100%;
+			table-layout: fixed;  /* Ensures the table takes up the full width */
+			/* -webkit-font-smoothing: antialiased; Improves font rendering on Web */
+			/* -webkit-text-size-adjust: 100%; */
+			background-color: #DAD4CB;
+			padding-bottom: 60px;
+			/* -ms-text-size-adjust: 100%; */
+		}
+		.main {
+			background-color: #FCF9F5;
+			margin: 0 auto;   /* Centers the table */
+			width: 100%;
+			max-width: 600px; /* Sets a max width for the email */
+			border-spacing: 0;
+			box-shadow: 0 25px rgba(0, 0, 0, 0.15);
+			font-family: 'Poppins', Arial, Helvetica, sans-serif;
+			color: #44413d;
+			text-align: center;
+		}
+		.three-columns {
+			padding: 50px 0 25px;
+			font-size: 0;
+		}
+		.three-columns .column {
+			width: 100%;
+			max-width: 200px;
+			display: inline-block;
+			vertical-align: top;
+		}
+		.three-columns .padding {
+			padding: 0 15px;
+		}
+		.three-columns .content {
+			font-size: 16px;
+			line-height: 22px;
+		}
+		h3 {
+			font-weight: 400;
+			font-size: 18px;
+			margin: 0;
+		}
+		.button {
+			text-decoration: none;
+			border-radius: 5px;
+			text-transform: uppercase;
+			background-color: #f4fde3;
+			padding: 10px 30px;
+			border: 2px solid #7f786e;
+			font-size: 14px;
+			display: inline-block;
+		}
+
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+	</style>
+</head>
+<body>
+
+	<table class="main" width="100%">
+
+		<!-- LOGO -->
+		<tr>
+			<td style="line-height: 0;">
+				<a href="#">
+					<img
+						width="600"
+						src="img/logo.jpg" 
+						alt="Logo"
+						style="max-width: 100%"
+					>
+				</a>
+			</td>
+		</tr>
+
+		<!-- BANNER IMAGE -->
+		<tr>
+			<td style="line-height: 0;">
+				<a href="#">
+					<img 
+						width="600"
+						src="img/banner.png" 
+						alt="Banner"
+						style="max-width: 100%"
+					>
+				</a>
+			</td>
+		</tr>
+
+		<!-- THREE COLUMN SECTION -->
+		<tr>
+			<td>
+				<table width="100%">
+					<tr>
+						<td class="three-columns"> <!-- Three-columns Wrapper-->
+							
+							<table class="column"> <!-- Start Table column 1 -->
+								<tr>
+									<td class="padding"> <!-- Padding -->
+										<table class="content"> <!-- Content -->
+											<tr>
+												<td style="padding: 5px 0 10px;">
+													<h3>Joleen Mason</h3>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<a href="#">
+														<img 
+															src="img/col-1.jpg" 
+															alt="column-1"
+															width="170"
+														>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td style="padding: 3px 0 10px">
+													<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit?</p>
+												</td>
+											</tr>
+										</table> <!-- End content -->
+									</td> <!-- End padding -->
+								</tr>
+							</table> <!-- End Table column 1 -->
+
+							<table class="column"> <!-- Start Table column 2 -->
+								<tr>
+									<td class="padding"> <!-- Padding -->
+										<table class="content"> <!-- Content -->
+											<tr>
+												<td style="padding: 5px 0 10px;">
+													<h3>Oladapo Mason</h3>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<a href="#">
+														<img 
+															src="img/col-2.jpg" 
+															alt="column-2"
+															width="170"
+														>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td style="padding: 3px 0 10px">
+													<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit?</p>
+												</td>
+											</tr>
+										</table> <!-- End content -->
+									</td> <!-- End padding -->
+								</tr>
+							</table> <!-- End Table column 2 -->
+							
+							<table class="column"> <!-- Start Table column 3 -->
+								<tr>
+									<td class="padding"> <!-- Padding -->
+										<table class="content"> <!-- Content -->
+											<tr>
+												<td style="padding: 5px 0 10px;">
+													<h3>Emmanuel Mason</h3>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<a href="#">
+														<img 
+															src="img/col-3.jpg" 
+															alt="column-1"
+															width="170"
+														>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td style="padding: 3px 0 10px">
+													<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit?</p>
+												</td>
+											</tr>
+										</table> <!-- End content -->
+									</td> <!-- End padding -->
+								</tr>
+							</table> <!-- End Table column 3 -->
+
+						</td> <!-- End three-columns Wrapper-->
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+		<!-- COUPON SECTION -->
+		<tr>
+			<td style="background-color: #f4fde3;">
+				<table width="100%">
+					<tr>
+						<td style="padding: 15px; text-align: center;">
+							<h3 style="font-size: 18px; margin: 0">USE THIS PROMO CODE FOR 20% OFF</h3>
+						</td>
+					</tr>
+					<tr>
+						<td style="background-color: #f4fde3; padding: 5px 15px 20px 15px; text-align: center;">
+							<a 
+								href="#" 
+								style="color: #534c46; text-decoration: none; border-radius: 5px; display: inline-block;"
+								class="button"
+							>	MASON20
+							</a>
+						</td>
+					</tr>
+				</table>	
+			</td>
+		</tr>
+
+		<!-- FOOTER SECTION -->
+		<tr>
+			<td style="padding: 0; border-bottom: 10px solid #7d7670;">
+				<table width="100%">
+
+					<tr>
+						<td style="padding: 35px 20px">
+							<a href="#">
+								<img src="img/facebook.png" alt="Facebook" style="border: 0" width="50">
+							</a>
+							<a href="#">
+								<img src="img/instagram.png" alt="Instagram image" style="border: 0" width="50">
+							</a>
+							<a href="#">
+								<img src="img/twitter-x.png" alt="Twitter image" style="border: 0" width="50">
+							</a>
+							<a href="#">
+								<img src="img/youtube.png" alt="Youtube image" style="border: 0" width="50">
+							</a>
+
+							<p style="padding: 3px">
+								<a href="#" style="color: #44413d; text-decoration: none; font-size: 14px; letter-spacing: 1px;">
+									facebook.com/mason
+								</a>
+							</p>
+
+							<p style="font-size: 14px;">
+								<a href="#" style="color: #44413d; text-decoration: none; letter-spacing: 1px; text-transform: uppercase;">Subscriber Preferences</a>
+							</p>
+
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		
+	</table> 
+
+</body>
+</html>
