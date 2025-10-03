@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donation Confirmation</title>
+    <title>KYC Rejected</title>
     <style type="text/css">
       @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -51,16 +51,9 @@
         text-align: center;
       }
 
-      .fundraiser-box {
-        background-color: #f8f9fa;
-        border-left: 4px solid #006666;
-        padding: 16px 20px;
-        margin: 25px 0;
-      }
-
-      .donation-box {
-        background-color: #f8f9fa;
-        border-left: 4px solid #006666;
+      .rejection-box {
+        background-color: #fff5f5;
+        border-left: 4px solid #dc3545;
         padding: 16px 20px;
         margin: 25px 0;
       }
@@ -86,63 +79,51 @@
       <tr>
         <td style="padding: 0 30px 40px;">
           <h1 style="margin: 10px 0 30px; font-size: 30px; color: #1a1a1a; line-height: 1.3; font-weight: 600;">
-            Thank You for Your Donation!
+            KYC Application Rejected
           </h1>
 
-          <p style="margin: 10px 0 20px; font-size: 16px; color: #1a1a1a;">Dear Samuel,</p>
+          <p style="margin: 10px 0 20px; font-size: 18px; color: #1a1a1a;"><strong>Dear Samuel,</strong></p>
 
           <p style="margin: 20px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
-            Thank you for your generous donation! Your contribution is making a real difference and bringing us one step closer to achieving this important goal.
+            Thank you for submitting your KYC (Know Your Customer) application. After careful review, we regret to inform you that your application could not be approved at this time.
           </p>
 
           <table width="100%" cellpadding="0" cellspacing="0" style="margin: 25px 0;">
             <tr>
-              <td class="donation-box" style="background-color: #f8f9fa; border-left: 4px solid #006666; padding: 16px 20px;">
+              <td class="rejection-box" style="background-color: #fff5f5; border-left: 4px solid #dc3545; padding: 16px 20px;">
                 <p style="margin: 0 0 8px; font-size: 12px; color: #666666; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
-                  Donation Amount
+                  Reason for Decision
                 </p>
-                <p style="margin: 0 0 15px; font-size: 14px; color: #1a1a1a; font-weight: 700;">
-                  ₦{{DONATION_AMOUNT}}
+                <p style="margin: 0; font-size: 14px; color: #1a1a1a; line-height: 1.6; font-weight:700;">
+                  {{REJECTION_REASON}}
                 </p>
-                <table width="100%" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td style="padding: 5px 0;">
-                      <p style="margin: 0; font-size: 13px; color: #666666;">Transaction ID:</p>
-                      <p style="margin: 2px 0 0; font-size: 14px; color: #1a1a1a; font-weight: 700;">{{TRANSACTION_ID}}</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 5px 0;">
-                      <p style="margin: 0; font-size: 13px; color: #666666;">Date:</p>
-                      <p style="margin: 2px 0 0; font-size: 14px; color: #1a1a1a; font-weight: 700;">{{DONATION_DATE}}</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 5px 0;">
-                      <p style="margin: 0; font-size: 13px; color: #666666;">Payment Method:</p>
-                      <p style="margin: 2px 0 0; font-size: 14px; color: #1a1a1a; font-weight: 700;">{{PAYMENT_METHOD}}</p>
-                    </td>
-                  </tr>
-                </table>
               </td>
             </tr>
           </table>
 
-          <table width="100%" cellpadding="0" cellspacing="0" style="margin: 25px 0;">
+          <p style="margin: 25px 0 0; font-size: 18px; color: #1a1a1a; line-height: 1.6;">
+            <strong>Can you resubmit?</strong>
+          </p>
+
+          <p style="margin: 15px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
+            Yes! You can submit a new KYC application once you have addressed the issues mentioned above. Please ensure all documents are clear, valid, and match the information provided in your application.
+          </p>
+
+          <table width="100%" cellpadding="0" cellspacing="0">
             <tr>
-              <td class="fundraiser-box" style="background-color: #f8f9fa; border-left: 4px solid #006666; padding: 16px 20px;">
-                <p style="margin: 0 0 8px; font-size: 12px; color: #666666; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
-                  You Donated To
-                </p>
-                <p style="margin: 0; font-size: 14px; color: #1a1a1a; font-weight: 750; line-height: 1.4;">
-                  HELP BUILD A SCHOOL IN KENYA
-                </p>
+              <td>
+                <a 
+                  href="#" 
+                  class="button" 
+                  style="display: inline-block; padding: 14px 32px; background-color: #006666; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 15px;"
+                > Resubmit KYC Application
+                </a>
               </td>
             </tr>
           </table>
 
           <p style="margin: 30px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
-            Thank you for being part of the change. Your generosity is truly appreciated!
+            If you need clarification on why your application was not approved or require assistance with the resubmission process, our support team is here to help.
           </p>
 
           <p style="margin: 35px 0 0; font-size: 16px; color: #1a1a1a; line-height: 1.6;">
@@ -157,10 +138,10 @@
       <tr>
         <td style="padding: 30px 30px; ">
           <p style="margin: 0; font-size: 13px; color: #999999; text-align: center; line-height: 1.6;">
-            You have received this notification because you made a donation on Crowd77.
+            You have received this notification because you submitted a KYC application on Crowd77.
           </p>
           <p style="margin: 10px 0 0; font-size: 13px; color: #999999; text-align: center; line-height: 1.6;">
-            If you did not make this donation, please contact our support team immediately.
+            If you did not submit this application, please contact our support team immediately.
           </p>
         </td>
       </tr>
