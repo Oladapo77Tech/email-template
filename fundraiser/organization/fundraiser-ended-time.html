@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Fundraiser</title>
+    <title>Fundraiser Ended</title>
     <style type="text/css">
       @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -48,14 +48,24 @@
         font-weight: 600;
         font-size: 16px;
         margin-top: 20px;
-        text-align: center;;
+        text-align: center;
+        ;
       }
 
       .fundraiser-box {
         background-color: #f8f9fa;
         border-left: 4px solid #006666;
         padding: 16px 20px;
-        margin: 25px 0;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 14px 28px;
+        background-color: #006666;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 15px;
       }
 
     </style>
@@ -84,39 +94,73 @@
 
       <tr>
         <td style="padding: 0 30px 40px;">
-          <h1 style="margin: 10px 0 30px; font-size: 30px; color: #1a1a1a; line-height: 1.3; font-weight: 600;">
-            Fundraiser Under Review
-          </h1>
+          <h1 style="margin: 10px 0 30px; font-size: 30px; color: #1a1a1a; line-height: 1.3; font-weight: 600;"> Fundraiser Has Ended</h1>
 
           <p style="margin: 10px 0 20px; font-size: 18px; color: #1a1a1a;"><strong>Dear User</strong>,</p>
 
           <p style="margin: 20px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
-            Your fundraiser has been successfully updated on Crowd77! The changes you made have been submitted and are currently under review by our team.
+            Your fundraising campaign has officially ended. Thank you for your dedication and hard work in making a
+            difference through Crowd77!
           </p>
 
-          <table width="100%" cellpadding="0" cellspacing="0" style="margin: 25px 0;">
+          <table width="100%" cellpadding="0" cellspacing="0" style="margin: 25px 0 25px;">
             <tr>
-              <td class="fundraiser-box" style="background-color: #f8f9fa; border-left: 4px solid #006666; padding: 16px 20px;">
-                <p style="margin: 0 0 8px; font-size: 12px; color: #666666; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+              <td class="fundraiser-box"
+                style="background-color: #f8f9fa; border-left: 4px solid #006666; padding: 15px 20px 8px;">
+                <p
+                  style="margin: 0 0 2px; font-size: 12px; color: #666666; font-weight: 600; letter-spacing: 0.5px;">
                   Fundraiser Title
                 </p>
-                <p style="margin: 0; font-size: 14px; color: #1a1a1a; font-weight: 750; line-height: 1.4;">
-                  {{FUNDRAISER_TITLE}}
+                <p style="margin: 0; font-size: 14px; color: #1a1a1a; font-weight: 700; line-height: 1.4;">
+                  HELP BUILD A SCHOOL IN KENYA
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="fundraiser-box"
+                style="background-color: #f8f9fa; border-left: 4px solid #006666; padding: 8px 20px;">
+                <p
+                  style="margin: 0 0 2px; font-size: 12px; color: #666666; font-weight: 600; letter-spacing: 0.5px;">
+                  Total Raised
+                </p>
+                <p style="margin: 0; font-size: 14px; color: #1a1a1a; font-weight: 700; line-height: 1.4;">
+                  ₦{{TOTAL_RAISED}}
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="fundraiser-box"
+                style="background-color: #f8f9fa; border-left: 4px solid #006666; padding: 8px 20px;">
+                <p
+                  style="margin: 0 0 2px; font-size: 12px; color: #666666; font-weight: 600; letter-spacing: 0.5px;">
+                  Total Donors
+                </p>
+                <p style="margin: 0; font-size: 14px; color: #1a1a1a; font-weight: 700; line-height: 1.4;">
+                  {{TOTAL_DONORS}}
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="fundraiser-box"
+                style="background-color: #f8f9fa; border-left: 4px solid #006666; padding: 8px 20px 15px;">
+                <p
+                  style="margin: 0 0 2px; font-size: 12px; color: #666666; font-weight: 600; letter-spacing: 0.5px;">
+                  Campaign Duration
+                </p>
+                <p style="margin: 0; font-size: 14px; color: #1a1a1a; font-weight: 700; line-height: 1.4;">
+                  {{CAMPAIGN_START_DATE}} - {{CAMPAIGN_END_DATE}}
                 </p>
               </td>
             </tr>
           </table>
-
-          <p style="margin: 30px 0 0; font-size: 18px; color: #1a1a1a; line-height: 1.6;">
+          
+          <p style="margin: 20px 0 0; font-size: 18px; color: #1a1a1a; line-height: 1.6;">
             <strong>What happens next?</strong>
           </p>
 
           <p style="margin: 15px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
-            Our team will review the updates to ensure they comply with our guidelines. This review process typically takes 1-3 business days. Your fundraiser will continue to remain active during the review period.
-          </p>
-
-          <p style="margin: 20px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
-            Once approved, the updated information will be reflected on your fundraiser page. You can view and manage your fundraiser by clicking the button below:
+            Your raised funds will be processed and transferred to your designated account according to our withdrawal
+            schedule. You can view the full transaction details on your dashboard.
           </p>
 
           <table width="100%" cellpadding="0" cellspacing="0">
@@ -125,7 +169,7 @@
                 <a 
                   href="#" 
                   class="button" 
-                  style="display: inline-block; padding: 14px 32px; background-color: #006666; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 15px;"
+                  style="display: inline-block; padding: 12px 28px; background-color: #006666; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 15px;"
                 > View Fundraiser
                 </a>
               </td>
@@ -133,12 +177,8 @@
           </table>
 
           <p style="margin: 30px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
-            If you have any questions about the review process or need assistance with your fundraiser, our support team is here to help. Reach us at 
-            <a href="mailto:support@crowd77.com" style="color: #006666; text-decoration: underline;">support@crowd77.com</a>
-          </p>
-
-          <p style="margin: 24px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6; font-weight: 500;">
-            If you didn't make these changes, please contact our support team immediately.
+            We encourage you to share a final update with your donors, thanking them for their support and showing them
+            the impact of their contributions.
           </p>
 
           <p style="margin: 35px 0 0; font-size: 16px; color: #1a1a1a; line-height: 1.6;">
@@ -153,7 +193,11 @@
       <tr>
         <td style="padding: 30px 30px; ">
           <p style="margin: 0; font-size: 13px; color: #999999; text-align: center; line-height: 1.6;">
-            You have received this notification because you updated a fundraiser on Crowd77.
+            You have received this notification because you have signed up on Crowd77.
+          </p>
+          <p style="margin: 10px 0 0; font-size: 13px; color: #999999; text-align: center; line-height: 1.6;">
+            If you didn't create this fundraiser, please contact our support team
+            immediately.
           </p>
         </td>
       </tr>
