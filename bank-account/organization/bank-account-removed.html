@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crowd77 - Organization Sign-In Notification</title>
+    <title>Crowd77 - Organization Bank Account Removed</title>
     <style type="text/css">
       @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -39,9 +39,21 @@
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
       }
 
+      .button {
+        display: inline-block;
+        padding: 14px 32px;
+        background-color: #006666;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        margin-top: 20px;
+        text-align: center;
+      }
+
       .info-box {
         background-color: #f8f9fa;
-        border-left: 4px solid #006666;
+        border-left: 4px solid #d32f2f;
         padding: 16px 20px;
         margin: 25px 0;
       }
@@ -63,38 +75,49 @@
 
       <tr>
         <td style="padding: 0 30px 40px;">
-          <p style="margin: 10px 0 20px; font-size: 18px; color: #1a1a1a;"><strong>Welcome back, [User Name]</strong>,
+          <h1 style="margin: 10px 0 30px; font-size: 30px; color: #1a1a1a; line-height: 1.3; font-weight: 600;">
+            Bank Account Removed
+          </h1>
+
+          <p style="margin: 10px 0 20px; font-size: 18px; color: #1a1a1a;"><strong>Dear [User Name]</strong>,</p>
+
+
+          <p style="margin: 0 0 15px; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
+            A bank account has been removed from your organization's Crowd77 account. This account will no longer be
+            available for receiving withdrawals from your organization's fundraisers.
           </p>
 
-          <p style="margin: 20px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
-            You have successfully signed in to your organization account on Crowd77. We're glad to have you back!
+          <p style="margin: 5px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
+            If you have active fundraisers, please ensure you have another bank account added to receive withdrawals.
           </p>
 
           <table width="100%" cellpadding="0" cellspacing="0" style="margin: 25px 0;">
             <tr>
               <td class="info-box"
-                style="background-color: #f8f9fa; border-left: 4px solid #006666; padding: 16px 20px;">
-                <p style="margin: 0; font-size: 13px; color: #666666;">Date & Time:</p>
-                <p style="margin: 2px 0 0; font-size: 14px; color: #1a1a1a; font-weight: 600;">{{SIGNIN_DATE}}</p>
+                style="background-color: #f8f9fa; border-left: 4px solid #d32f2f; padding: 16px 20px;">
+                <p style="margin: 0; font-size: 13px; color: #666666;">Bank Name:</p>
+                <p style="margin: 2px 0 0; font-size: 14px; color: #1a1a1a; font-weight: 600;">{{BANK_NAME}}</p>
 
-                <p style="margin: 15px 0 0; font-size: 13px; color: #666666;">Location:</p>
-                <p style="margin: 2px 0 0; font-size: 14px; color: #1a1a1a; font-weight: 600;">{{SIGNIN_LOCATION}}</p>
+                <p style="margin: 15px 0 0; font-size: 13px; color: #666666;">Account Number:</p>
+                <p style="margin: 2px 0 0; font-size: 14px; color: #1a1a1a; font-weight: 600;">****{{LAST_4_DIGITS}}</p>
 
-                <p style="margin: 15px 0 0; font-size: 13px; color: #666666;">Device:</p>
-                <p style="margin: 2px 0 0; font-size: 14px; color: #1a1a1a; font-weight: 600;">{{DEVICE_INFO}}</p>
+                <p style="margin: 15px 0 0; font-size: 13px; color: #666666;">Account Name:</p>
+                <p style="margin: 2px 0 0; font-size: 14px; color: #1a1a1a; font-weight: 600;">{{ACCOUNT_NAME}}</p>
+
+                <p style="margin: 15px 0 0; font-size: 13px; color: #666666;">Date Removed:</p>
+                <p style="margin: 2px 0 0; font-size: 14px; color: #1a1a1a; font-weight: 600;">{{DATE_REMOVED}}</p>
               </td>
             </tr>
           </table>
 
           <p style="margin: 25px 0 0; font-size: 18px; color: #1a1a1a; line-height: 1.6;">
-            <strong>Didn't sign in?</strong>
+            <strong>Didn't remove this account?</strong>
           </p>
 
           <p style="margin: 10px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
-            If this wasn't someone from your organization or you don't recognize this sign-in activity, please secure
-            your account immediately by changing your password and
-            <a href="mailto:support@crowd77.com"
-              style="color: #006666; text-decoration: underline; display: inline-block;">contacting our support team</a>
+            If you didn't remove this bank account, please secure your account immediately by changing your password and
+            <a href="mailto:support@crowd77.com" style="color: #006666; text-decoration: underline;">contacting our
+              support team</a>.
           </p>
 
           <p style="margin: 35px 0 0; font-size: 16px; color: #1a1a1a; line-height: 1.6;">
@@ -105,11 +128,11 @@
       </tr>
     </table>
 
-    <table width="100%" style="margin-top: 0px; text-align: center;">
+    <table width="100%" style="margin: 0 auto; text-align: center; max-width: 600px;">
       <tr>
         <td style="padding: 30px 30px;">
           <p style="margin: 0; font-size: 13px; color: #999999; text-align: center; line-height: 1.6;">
-            You have received this notification because someone signed in to your organization's Crowd77 account.
+            You received this email because a bank account was removed from your organization's Crowd77 account.
           </p>
         </td>
       </tr>

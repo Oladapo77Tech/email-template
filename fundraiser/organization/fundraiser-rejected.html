@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundraiser Approved</title>
+    <title>Fundraiser Update</title>
     <style type="text/css">
       @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -62,29 +62,31 @@
         text-align: center;
       }
 
-      .success-badge {
-        background-color: #d4edda;
-        border-left: 4px solid #28a745;
+      .warning-badge {
+        background-color: #fff3cd;
+        border-left: 4px solid #ffc107;
         padding: 16px 20px;
         margin: 25px 0;
       }
 
       .fundraiser-box {
         background-color: #f8f9fa;
-        border-left: 4px solid #006666;
+        border-left: 4px solid #6c757d;
         padding: 16px 20px;
         margin: 25px 0;
       }
 
-      .tips-box {
-        background-color: #e6f3f3;
+      .reason-box {
+        background-color: #f8d7da;
+        border-left: 4px solid #dc3545;
         padding: 20px;
         margin: 25px 0;
       }
 
-      .stat-row {
-        padding: 12px 0;
-        border-bottom: 1px solid #e9ecef;
+      .help-box {
+        background-color: #e6f3f3;
+        padding: 20px;
+        margin: 25px 0;
       }
 
     </style>
@@ -93,13 +95,19 @@
   <body>
     <table class="main" width="100%" cellpadding="0" cellspacing="0">
       <tr>
-        <td style="padding: 20px 30px;">
-          <a href="#">
+        <td style="padding: 30px 30px; text-align: center;">
+          <a href="#" style="display: inline-block; text-decoration: none;">
             <img 
               src="https://i.ibb.co/k6WN4d7b/crowd77-logo.png" 
-              alt="crowd77-logo"
-              style="border: 0; display:block; margin-top: 10px;" 
+              alt="crowd77-icon"
+              style="border: 0; display: inline-block; vertical-align: middle; margin-right: 8px;" 
               width="40"
+            >
+            <img 
+              src="https://i.ibb.co/Jgfsnxm/crowd77-logo-full.png" 
+              alt="crowd77-logo"
+              style="border: 0; display: inline-block; vertical-align: middle;" 
+              width="150"
             >
           </a>
         </td>
@@ -109,7 +117,7 @@
         <td style="padding: 0 30px 40px;">
 
           <h1 style="margin: 10px 0 30px; font-size: 30px; color: #1a1a1a; line-height: 1.3; font-weight: 600;">
-            Congratulations! Your Fundraiser Has Been Approved
+            Fundraiser Rejected
           </h1>
 
           <p style="margin: 10px 0 20px; font-size: 18px; color: #1a1a1a;">
@@ -117,56 +125,53 @@
           </p>
 
           <p style="margin: 20px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
-            Great news! Your fundraiser for <strong>{{ORGANIZATION_NAME}}</strong> has been approved and is now live on Crowd77. You can start sharing it with your network and receiving donations right away.
+            Thank you for submitting a fundraiser on behalf of <strong>{{ORGANIZATION_NAME}}</strong>. After careful review, we're unable to approve your fundraiser at this time.
           </p>
 
           <table width="100%" cellpadding="0" cellspacing="0" style="margin: 25px 0;">
             <tr>
-              <td class="fundraiser-box" style="background-color: #f8f9fa; border-left: 4px solid #006666; padding: 16px 20px;">
-                <p style="margin: 0 0 8px; font-size: 14px; color: #666666; font-weight: 600; letter-spacing: 0.5px;">
+              <td class="fundraiser-box" style="background-color: #f8f9fa; border-left: 4px solid #6c757d; padding: 16px 20px;">
+                <p style="margin: 0 0 8px; font-size: 14px; color: #666666; font-weight: 500; letter-spacing: 0.5px;">
                   Fundraiser Title
                 </p>
-                <p style="margin: 0 0 12px; font-size: 18px; color: #1a1a1a; font-weight: 700; line-height: 1.4;">
+                <p style="margin: 0; font-size: 16px; color: #1a1a1a; font-weight: 700; line-height: 1.4;">
                   {{FUNDRAISER_TITLE}}
                 </p>
-              
-                <table width="100%" cellpadding="0" cellspacing="0" style="margin-top: 15px;">
-                  <tr class="stat-row" style="padding: 12px 0; border-bottom: 1px solid #e9ecef;">
-                    <td style="padding: 8px 0; font-size: 14px; color: #666666;">Goal Amount:</td>
-                    <td style="padding: 8px 0; font-size: 14px; color: #1a1a1a; text-align: right; font-weight: 600;">{{GOAL_AMOUNT}}</td>
-                  </tr>
-                  <tr class="stat-row" style="padding: 12px 0; border-bottom: 1px solid #e9ecef;">
-                    <td style="padding: 8px 0; font-size: 14px; color: #666666;">Campaign Duration:</td>
-                    <td style="padding: 8px 0; font-size: 14px; color: #1a1a1a; text-align: right; font-weight: 600;">{{DURATION}}</td>
-                  </tr>
-                  <tr style="padding: 12px 0;">
-                    <td style="padding: 8px 0; font-size: 14px; color: #666666;">Status:</td>
-                    <td style="padding: 8px 0; font-size: 14px; text-align: right;">
-                      <span style="background-color: #28a745; color: #ffffff; padding: 4px 12px; font-size: 12px; font-weight: 600; border-radius: 12px;">LIVE</span>
-                    </td>
-                  </tr>
-                </table>
               </td>
             </tr>
           </table>
 
           <table width="100%" cellpadding="0" cellspacing="0" style="margin: 25px 0;">
             <tr>
-              <td style="padding-bottom: 15px;">
-                <a 
-                  href="{{FUNDRAISER_URL}}" 
-                  class="button" 
-                  style="display: inline-block; padding: 14px 28px; background-color: #006666; color: #ffffff; text-decoration: none; font-weight: 600; font-size: 16px;">View Your Fundraiser</a>
+              <td class="reason-box" style="background-color: #f8d7da; border-left: 4px solid #dc3545; padding: 20px;">
+                <p style="margin: 0 0 12px; font-size: 16px; color: #721c24; font-weight: 700;">
+                  Reason for Rejection:
+                </p>
+                <p style="margin: 0; font-size: 15px; color: #721c24; line-height: 1.6;">
+                  {{REJECTION_REASON}}
+                </p>
               </td>
             </tr>
           </table>
 
           <p style="margin: 25px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
-            Need help? Our support team is here to assist you every step of the way. Visit our Help Center or reply to this email with any questions.
+            We understand this may be disappointing, but we encourage you to address the issues mentioned and resubmit your fundraiser.
           </p>
 
-          <p style="margin: 30px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
-            We're excited to see the impact you'll make!
+          <table width="100%" cellpadding="0" cellspacing="0" style="margin: 30px 0;">
+            <tr>
+              <td style="padding-bottom: 15px;">
+                <a 
+                  href="{{EDIT_FUNDRAISER_URL}}" 
+                  class="button" 
+                  style="display: inline-block; padding: 14px 32px; background-color: #006666; color: #ffffff; text-decoration: none; font-weight: 600; font-size: 16px;"
+                >Resubmit Fundraiser</a>
+              </td>
+            </tr>
+          </table>
+
+          <p style="margin: 5px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
+            We appreciate your understanding and your commitment to making a positive impact. Our team is committed to helping you succeed, and we're here to support you through the resubmission process.
           </p>
 
           <p style="margin: 35px 0 0; font-size: 16px; color: #1a1a1a; line-height: 1.6;">
@@ -181,7 +186,7 @@
       <tr>
         <td style="padding: 30px 30px;">
           <p style="margin: 0; font-size: 13px; color: #999999; text-align: center; line-height: 1.6;">
-            You received this notification because your fundraiser on Crowd77 has been approved.
+            You received this notification regarding your fundraiser submission on Crowd77.
           </p>
           <p style="margin: 10px 0 0; font-size: 12px; color: #999999; text-align: center;">
             © 2025 Crowd77. All rights reserved.

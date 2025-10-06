@@ -48,7 +48,7 @@
         font-weight: 600;
         font-size: 16px;
         margin-top: 20px;
-        text-align: center;;
+        text-align: center;
       }
 
       .fundraiser-box {
@@ -58,19 +58,36 @@
         margin: 25px 0;
       }
 
+      .org-badge {
+        display: inline-block;
+        background-color: #e6f3f3;
+        color: #006666;
+        padding: 4px 10px;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 4px;
+        margin-left: 8px;
+      }
+
     </style>
   </head>
 
   <body>
     <table class="main" width="100%" cellpadding="0" cellspacing="0">
       <tr>
-        <td style="padding: 20px 30px;">
-          <a href="#">
+        <td style="padding: 30px 30px; text-align: center;">
+          <a href="#" style="display: inline-block; text-decoration: none;">
             <img 
               src="https://i.ibb.co/k6WN4d7b/crowd77-logo.png" 
-              alt="crowd77-logo"
-              style="border: 0; display:block; margin-top: 10px;" 
+              alt="crowd77-icon"
+              style="border: 0; display: inline-block; vertical-align: middle; margin-right: 8px;" 
               width="40"
+            >
+            <img 
+              src="https://i.ibb.co/Jgfsnxm/crowd77-logo-full.png" 
+              alt="crowd77-logo"
+              style="border: 0; display: inline-block; vertical-align: middle;" 
+              width="150"
             >
           </a>
         </td>
@@ -82,10 +99,12 @@
             Fundraiser Created Successfully!
           </h1>
 
-          <p style="margin: 10px 0 20px; font-size: 16px; color: #1a1a1a;">Dear <strong>Hope Foundation</strong>,</p>
+          <p style="margin: 10px 0 20px; font-size: 18px; color: #1a1a1a;">
+            Dear <strong>{{USER_NAME}}</strong>,
+          </p>
 
           <p style="margin: 20px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
-            Thank you for creating a fundraiser on Crowd77! Your fundraiser has been successfully submitted and is currently under review by our team.
+            Thank you for creating a fundraiser on behalf of <strong>{{ORGANIZATION_NAME}}</strong>! Your fundraiser has been successfully submitted and is currently under review by our team.
           </p>
 
           <table width="100%" cellpadding="0" cellspacing="0" style="margin: 25px 0;">
@@ -94,15 +113,15 @@
                 <p style="margin: 0 0 8px; font-size: 12px; color: #666666; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
                   Fundraiser Title
                 </p>
-                <p style="margin: 0; font-size: 14px; color: #1a1a1a; font-weight: 750; line-height: 1.4;">
-                  HELP BUILD A SCHOOL IN KENYA
+                <p style="margin: 0 0; font-size: 16px; color: #1a1a1a; font-weight: 700; line-height: 1.4;">
+                  {{FUNDRAISER_TITLE}}
                 </p>
               </td>
             </tr>
           </table>
 
           <p style="margin: 30px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
-            <strong>Please note that Know Your Customer (KYC) verification is a mandatory requirement for fundraiser approval.</strong> To ensure your fundraiser can go live and start receiving donations, you must complete the KYC process as soon as possible.
+            <strong>Please note that Know Your Customer (KYC) verification is a mandatory requirement for fundraiser approval.</strong> Your organization must complete the KYC process to ensure your fundraiser can go live and start receiving donations.
           </p>
 
           <p style="margin: 20px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
@@ -113,21 +132,30 @@
             <tr>
               <td>
                 <a 
-                  href="#" 
+                  href="{{KYC_VERIFICATION_LINK}}" 
                   class="button" 
                   style="display: inline-block; padding: 14px 32px; background-color: #006666; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 15px;"
-                > Start KYC Verification
-                </a>
+                >Start KYC Verification</a>
               </td>
             </tr>
           </table>
 
-          <p style="margin: 30px 0 0; font-size: 15px; color: #666666; line-height: 1.6;">
+          <p style="margin: 30px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
             Our fundraiser review process typically takes 1-3 business days. Once your KYC is verified and your fundraiser is approved, you'll receive a confirmation email and your fundraiser will be published on the platform.
           </p>
 
+          <table width="100%" cellpadding="0" cellspacing="0" style="margin: 25px 0;">
+            <tr>
+              <td style="background-color: #fff8e6; border-left: 4px solid #ffa500; padding: 16px 20px;">
+                <p style="margin: 0; font-size: 14px; color: #1a1a1a; line-height: 1.5;">
+                  Please ensure all submitted documents are official and authorized by {{ORGANIZATION_NAME}}.
+                </p>
+              </td>
+            </tr>
+          </table>
+
           <p style="margin: 24px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6; font-weight: 500;">
-            If you didn't create an account on Crowd77, please ignore this message.
+            If you didn't create this fundraiser, please contact our support team immediately.
           </p>
 
           <p style="margin: 35px 0 0; font-size: 16px; color: #1a1a1a; line-height: 1.6;">
@@ -140,9 +168,12 @@
 
     <table width="100%" style="margin-top: 0px; text-align: center;">
       <tr>
-        <td style="padding: 30px 30px; ">
+        <td style="padding: 30px 30px;">
           <p style="margin: 0; font-size: 13px; color: #999999; text-align: center; line-height: 1.6;">
-            You have received this notification because you have signed up on Crowd77.
+            You have received this notification because you created a fundraiser on Crowd77.
+          </p>
+          <p style="margin: 10px 0 0; font-size: 12px; color: #999999; text-align: center;">
+            © 2025 Crowd77. All rights reserved.
           </p>
         </td>
       </tr>
