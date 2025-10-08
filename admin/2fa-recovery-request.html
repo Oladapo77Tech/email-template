@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundraiser Verification Request Submission Received</title>
+    <title>2FA Recovery Request Notification</title>
     <style type="text/css">
       @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -39,13 +39,23 @@
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
       }
 
-      .fundraiser-box {
+      .button {
+        display: inline-block;
+        padding: 14px 28px;
+        background-color: #006666;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        margin-top: 20px;
+      }
+
+      .box {
         background-color: #f8f9fa;
         border-left: 4px solid #006666;
         padding: 16px 20px;
         margin: 25px 0;
       }
-
     </style>
   </head>
 
@@ -65,43 +75,43 @@
       <tr>
         <td style="padding: 0 30px 40px;">
           <h1 style="margin: 10px 0 30px; font-size: 30px; color: #1a1a1a; line-height: 1.3; font-weight: 600;">
-            New Fundraiser Verification Request
+            New 2FA Recovery Request
           </h1>
 
-          <p style="margin: 10px 0 20px; font-size: 16px; color: #1a1a1a;"><strong>Dear Admin,</strong></p>
+          <p style="margin: 10px 0 20px; font-size: 18px; color: #1a1a1a;"><strong>Dear Admin,</strong></p>
 
           <p style="margin: 20px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
-            A new fundraiser verification request has been submitted and requires your review.
+            A user has requested 2FA recovery and requires your immediate attention.
           </p>
 
           <table width="100%" cellpadding="0" cellspacing="0" style="margin: 25px 0;">
             <tr>
-              <td class="fundraiser-box"
+              <td class="box"
                 style="background-color: #f8f9fa; border-left: 4px solid #006666; padding: 16px 20px;">
                 <p
-                  style="margin: 0 0 8px; font-size: 12px; color: #666666; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
-                  Request Details
+                  style="margin: 0 0 8px; font-size: 13px; color: #666666; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;">
+                  Recovery Request Details
                 </p>
 
-                <p style="margin: 15px 0 0; font-size: 13px; color: #666666;">Fundraiser Title:</p>
-                <p style="margin: 2px 0 0; font-size: 14px; color: #1a1a1a; font-weight: 600;">{{FUNDRAISER_TITLE}}</p>
+                <p style="margin: 15px 0 0; font-size: 13px; color: #666666;">User Name:</p>
+                <p style="margin: 2px 0 0; font-size: 14px; color: #1a1a1a; font-weight: 600;">{{USER_NAME}}</p>
 
-                <p style="margin: 15px 0 0; font-size: 13px; color: #666666;">Organizer:</p>
-                <p style="margin: 2px 0 0; font-size: 14px; color: #1a1a1a; font-weight: 600;">{{ORGANIZER_NAME}}</p>
+                <p style="margin: 15px 0 0; font-size: 13px; color: #666666;">Email Address:</p>
+                <p style="margin: 2px 0 0; font-size: 14px; color: #1a1a1a; font-weight: 600;">{{EMAIL_ADDRESS}}</p>
 
               </td>
             </tr>
           </table>
 
           <p style="margin: 20px 0 0; font-size: 15px; color: #1a1a1a; line-height: 1.6;">
-            Please review the verification request and submitted documents in the admin dashboard.
+            Please verify the user's identity and process the 2FA recovery request in the admin dashboard.
           </p>
 
-          <table width="100%" cellpadding="0" cellspacing="0" style="margin: 25px 0 0;">
+          <table width="100%" cellpadding="0" cellspacing="0" style="margin: 5px 0 0;">
             <tr>
               <td>
                 <a href="{{ADMIN_REVIEW_LINK}}" class="button"
-                  style="display: inline-block; padding: 14px 32px; background-color: #006666; color: #ffffff; text-decoration: none; font-weight: 600; font-size: 16px; text-align: center;">
+                  style="display: inline-block; padding: 14px 28px; background-color: #006666; color: #ffffff; text-decoration: none; font-weight: 600; font-size: 16px; text-align: center;">
                   View Request
                 </a>
               </td>
